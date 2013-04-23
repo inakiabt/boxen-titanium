@@ -1,5 +1,4 @@
 class titanium {
-  include nodejs
   package { 'titanium':
     ensure   => latest,
     provider => 'npm',
