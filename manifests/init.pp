@@ -1,19 +1,17 @@
 class titanium {
-  package { 'titanium':
-    ensure   => latest,
-    provider => 'npm',
-    require => Package['npm']
+  exec { "titanium":
+    command  => "npm install -g titanium",
+    provider => 'shell',
+    timeout  => 0
   }
-
-  package { 'alloy':
-    ensure   => latest,
-    provider => 'npm',
-    require => Package['npm']
+  exec { "alloy":
+    command  => "npm install -g alloy",
+    provider => 'shell',
+    timeout  => 0
   }
-
-  package { 'tishadow':
-    ensure   => latest,
-    provider => 'npm',
-    require => Package['npm']
+  exec { "tishadow":
+    command  => "npm install -g tishadow",
+    provider => 'shell',
+    timeout  => 0
   }
 }
